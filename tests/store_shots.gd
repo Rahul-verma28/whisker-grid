@@ -31,6 +31,8 @@ func _seed(theme_id: String, level: int, selected: String, owned: Array) -> void
 	cfg.set_value("progress", "owned", owned)
 	cfg.set_value("progress", "selected", selected)
 	cfg.set_value("settings", "theme", theme_id)
+	var d := Time.get_date_dict_from_system()
+	cfg.set_value("progress", "gift_date", "%04d-%02d-%02d" % [d.year, d.month, d.day])   # no gift popup in shots
 	cfg.set_value("settings", "music", false)
 	cfg.save("user://save.cfg")
 
