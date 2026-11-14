@@ -1,0 +1,10 @@
+.godot/
+export/
+*.apk
+*.aab
+*.keystore
+build/
+release/
+store/raw_shots/
+android/build/
+release_apk/
